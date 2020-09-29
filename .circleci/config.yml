@@ -7,6 +7,6 @@ jobs:
       steps:
         - checkout
         - bridgecrew/scan:
-            directory: ‘.’
+            directory: ‘./terraform’
             api-key-variable: BC_API_KEY
             
