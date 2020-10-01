@@ -9,4 +9,3 @@ jobs:
         - bridgecrew/scan:
             directory: .
             api-key-variable: BC_API_KEY
-            
