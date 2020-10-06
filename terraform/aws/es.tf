@@ -14,6 +14,9 @@ resource "aws_elasticsearch_domain" "monitoring-framework" {
     ebs_enabled = true
     volume_size = 30
   }
+  encrypt_at_rest {
+    enabled = true
+  }
 }
 
 data aws_iam_policy_document "policy" {
