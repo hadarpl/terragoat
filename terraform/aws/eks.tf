@@ -35,7 +35,7 @@ resource aws_vpc "eks_vpc" {
   enable_dns_hostnames = true
   enable_dns_support   = true
   tags = {
-    Name = "${local.resource_prefix.value}-eks-vpc"
+    Name = "${local.resource_prefix.value}-eks-vpc-11"
   }
 }
 
