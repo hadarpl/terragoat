@@ -103,9 +103,9 @@ resource "aws_subnet" "web_subnet2" {
   availability_zone       = var.availability_zone2
   map_public_ip_on_launch = true
 
-  tags = {
-    Name = "${local.resource_prefix.value}-subnet2"
-  }
+#   tags = {
+#     Name = "${local.resource_prefix.value}-subnet2"
+#   }
 }
 
 
