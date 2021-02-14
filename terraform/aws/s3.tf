@@ -93,3 +93,13 @@ resource "aws_s3_bucket" "logs" {
     Environment = local.resource_prefix.value
   }
 }
+
+resource "aws_s3_bucket" "badges_bucket_suliko" {
+  # checkov:skip=CKV_AWS_18: Public bucket
+  # checkov:skip=CKV_AWS_19: Public bucket
+  # checkov:skip=CKV_AWS_21: the code is in GitHub versioned
+  # checkov:skip=CKV_AWS_52: Public bucket
+  bucket        = local.badge_bucket_name
+  policy        = data.aws_iam_policy_document.badge_bucket_policy.json
+  force_destroy = "true"
+}
